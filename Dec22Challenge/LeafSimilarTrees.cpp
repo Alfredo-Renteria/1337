@@ -4,7 +4,7 @@
 * December LeetCoding Challenge - Easy
 * @Topics: Tree, DFS, Binary Tree
 * @Time: O(T1+T2) @Space: O(T1+T2)
-* Where T1,T2 are the lengths of the trees
+* Where T1,T2 are the lengths of the trees.
 */
 
 #include <iostream>
