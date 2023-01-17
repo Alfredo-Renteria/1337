@@ -3,6 +3,10 @@
 * Leetcode Problem #1971: Find If Path Exists In Graph
 * December '22 LeetCoding Challenge - Easy
 * @Topics: BFS, DFS, Union Find, Graph
+* BFS: @Time: O(n + m) Space: O(n + m)
+* Where n, m represents the # of nodes, and # of edges respectively
+* DFS: @Time: O(n + m) Space: O(n + m)
+* Union Find: @Time: O(amortized(n) * m) Space: O(n)
 */
 
 #include <iostream>
@@ -14,9 +18,7 @@
 using adjList = std::unordered_map<int,std::vector<int>>;
 using graph = std::vector<std::vector<int>>;
 /*
-//BFS method
-//@Time: O(n + m) Space: O(n + m)
-//Where n, m represents the # of nodes, and # of edges respectively
+//Breadth First Search
 bool validPath(int n, graph& edges, int src, int dest) {
     //Initialize unordered_map that will store all edges in the graph
     adjList graph;
@@ -51,8 +53,7 @@ bool validPath(int n, graph& edges, int src, int dest) {
     return false;
 }
 
-//DFS method
-//@Time: O(n + m) Space: O(n + m)
+//Depth First Search
 bool dfs(adjList& graph, std::vector<bool>& visited, int currNode, int dest) {
     if (currNode == dest) {
         return true;
@@ -79,8 +80,7 @@ bool validPath(int n, graph& edges, int src, int dest) {
     return dfs(graph, visited, src, dest);
 }
 */
-//Disjoint Set Union Method
-//@Time: O(amortized(n) * m) Space: O(n)
+//Disjoint Set Union
 struct UnionFind {
     std::vector<int> parent, rank;
     UnionFind(int n) : parent(n), rank(n, 1) {

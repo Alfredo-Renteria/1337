@@ -3,8 +3,8 @@
 * Leetcode Problem #872: Leaf-Similar Trees
 * December LeetCoding Challenge - Easy
 * @Topics: Tree, DFS, Binary Tree
-* @Time: O(T1+T2) @Space: O(T1+T2)
-* Where T1 & T2 are the lengths of the trees
+* @Time: O(n1 + n2) @Space: O(n1 + n2)
+* Where n1 & n2 are the # of nodes in their respective trees
 */
 
 #include <iostream>
