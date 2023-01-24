@@ -3,7 +3,7 @@
 * Leetcode Problem #98: Validate Binary Search Tree
 * Grind 75, Mock Onsite - Medium
 * @Topics: Array, String, DFS, BFS, Union Find
-* DFS: @Time: O(nklognk) @Space: O(nk)
+* DFS: @Time: O(n * k * logn*k) @Space: O(n * k)
 * Where n is the size of accounts and k is the max size of an account
 * Time: nk operations if all emails belong to one person, lognk for std::sort()
 */
