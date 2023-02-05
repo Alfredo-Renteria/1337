@@ -13,16 +13,16 @@
 #include <vector>
 
 //Recursive Top Down
-int memo(std::vector<int>& nums, int i, std::vector<int>& dp) {     
+int memo(std::vector<int>& nums, std::vector<int>& dp, int i) {     
     if (i < 0) {
         return 0;
     }
 
-    if (dp[i] >= 0) {
+    if (dp[i] != - 1) {
         return dp[i];
     }
             
-    dp[i] = std::max(memo(nums, i-1, dp), memo(nums, i-2, dp) + nums[i]);
+    dp[i] = std::max(memo(nums, dp, i-1), memo(nums, dp, i-2) + nums[i]);
     
     return dp[i];
 }
