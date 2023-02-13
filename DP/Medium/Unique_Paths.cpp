@@ -26,7 +26,9 @@ int memo(int row, int col, std::vector<std::vector<int>>& dp){
         return dp[row][col];
     }
     
-    return dp[row][col] = memo(row+1, col, dp) + memo(row, col+1, dp);
+    dp[row][col] = memo(row+1, col, dp) + memo(row, col+1, dp);
+
+    return dp[row][col];
 }
 //Main    
 int uniquePaths(int m, int n) {
